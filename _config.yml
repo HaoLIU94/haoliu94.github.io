@@ -1,4 +1,4 @@
-title: Hao Liu
+title: Hao's page
 author: Hao Liu
 email: liuhaoxdu@gmail.com
 
@@ -17,6 +17,11 @@ plainwhite:
   dark_mode: true # set to true to add dark mode toggle
   portfolio_image: "pics/me.png" # the path from the base directory of the site to the image to display (no / at the start)
   html_lang: "en" # set the lang attribute of the <html> tag for the pages.
+  navigation:
+    - title: Work
+      url: "/work"
+    - title: Resume
+      url: "/resume"
   condensed_mobile:
     - home
     - page
@@ -25,23 +30,6 @@ plainwhite:
   social_links:
     github:  HaoLIU94
     linkedIn: in/hao-l-7a4078159/
-    #dribbble: jekyll
-    #flickr:   jekyll
-    #instagram: jekyll
-    #pinterest: jekyll
-    #youtube: jekyll
-    #facebook: jekyll
-    #soundcloud: jekyll
-    #telegram: jekyll
-    #gitlab: jekyll
-    #email: jekyll
-
-    # Mastodon instances
-    # mastodon:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
