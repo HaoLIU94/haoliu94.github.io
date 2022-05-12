@@ -8,6 +8,8 @@ email: liuhaoxdu@gmail.com
 # Build settings
 remote_theme: samarsault/plainwhite-jekyll
 
+show_excerpts: true
+
 plainwhite:
   name: Hao LIU - 劉豪
   tagline: Machine learning engineer
