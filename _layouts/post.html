@@ -1,0 +1,98 @@
+---
+layout: default
+---
+{%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
+<div class="post-container">
+  <a class="post-link" href="{{ page.url | relative_url }}">
+    <h2 class="post-title">{{ page.title | escape }}</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>{{ page.date | date: date_format }}</div>
+    {%- if page.categories.size > 0 -%}
+    <ul class="post-categories">
+      {%- for tag in page.categories -%}
+      <li>{{ tag }}</li>
+      {%- endfor -%}
+    </ul>
+    {%- endif -%}
+  </div>
+  <div class="post">
+    {{ content }}
+  </div>
+  {%- if site.plainwhite.disqus_shortname -%}
+  <div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '{{ page.url | absolute_url }}';
+      this.page.identifier = '{{ page.url | absolute_url }}';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://{{ site.plainwhite.disqus_shortname }}.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript>
+  {%- endif -%}
+</div>
+<style>
+  .content {
+    max-width: 400px;
+    margin: auto;
+  }
+  </style>
+  <body>
+  
+  <div class="content">
+      <p>
+      Since October 2019, I work as a machine learning engineer at <a href="https://navya.tech/en/"> Navya
+      </p>
+    
+      <div id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <div id="text-table-of-contents">
+        <ul>
+        <li><a href="#orgd58b0f6">Publication</a></li>
+        <li><a href="#orgc54fd50">Main research interest</a></li>
+        </ul>
+        </div>
+        </div>
+        
+        <div id="outline-container-orgd58b0f6" class="outline-2">
+        <h2 id="orgd58b0f6">Publication</h2>
+        <div class="outline-text-2" id="text-orgd58b0f6">
+        <p>
+        See my <a href="bad_link"> Google Scholar</a>
+        </p>
+        </div>
+        </div>
+        
+        <div id="outline-container-orgc54fd50" class="outline-2">
+        <h2 id="orgc54fd50">Main research interest</h2>
+        <div class="outline-text-2" id="text-orgc54fd50">
+        <p>
+          Machine learning engineer specialized in computer vision. With three years of industry experience in autonomous driving perception problems. Interested in object detection, semantic segmentation, multi-object tracking, sensor fusion, simultaneous localization and mapping. Passionate about solving real world problems.
+        </p>
+        </div>
+        </div>
+        
+      
+        
+        <div id="outline-container-orgbc2ddb7" class="outline-2">
+        <h2 id="orgbc2ddb7">Contact</h2>
+        <div class="outline-text-2" id="text-orgbc2ddb7">
+        <p>
+        My postmail address (email prefered): 
+        </p>
+        
+        <p>
+        Hao Liu, 7 Place de la Défense, Puteaux, 92800, France
+        </p>
+        </div>
+        </div>
+      
+  </div>
+  
+  </body>
