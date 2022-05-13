@@ -22,7 +22,7 @@ plainwhite:
   navigation:
     - title: Work
       url: "/work"
-    - title: Resume
+    - title: Résumé
       url: "/resume"
   condensed_mobile:
     - home
