@@ -1,6 +1,5 @@
 title: Hao's page
 author: Hao Liu
-email: liuhaoxdu@gmail.com
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -17,21 +16,25 @@ plainwhite:
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
   dark_mode: true # set to true to add dark mode toggle
-  portfolio_image: "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
+  portfolio_image: "assets/portfolio.png" # path the image to display
   html_lang: "en" # set the lang attribute of the <html> tag for the pages.
   navigation:
-    - title: Work
-      url: "/work"
     - title: Résumé
-      url: "/resume"
+      url: #"/resume"
   condensed_mobile:
     - home
-    - page
     - post
+    - page
+  posts:
+    - title: js
+      url: "2019-03-23-welcome-to-jekyll.md"
+    - title: cv
+      url: "2019-03-23-welcome-to-jekyll.md"
   # generate social links in footer
   social_links:
     github:  HaoLIU94
     linkedIn: in/hao-l-7a4078159/
+    email: liuhaoxdu@gmail.com
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up

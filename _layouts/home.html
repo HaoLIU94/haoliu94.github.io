@@ -17,13 +17,7 @@ layout: default
   <div class="content">
       <h1>Welcome</h1>
       <p>
-       Since October 2019, I work as a machine learning engineer at <a href="https://navya.tech/en/"> Navya</a>
-      </p>
-      <p>
-        Since October 2019, I work as a machine learning engineer at <a href="https://navya.tech/en/"> Navya</a>
-      </p>
-      <p>
-        Since October 2019, I work as a machine learning engineer at <a href="https://navya.tech/en/"> Navya</a>
+       I am a Machine Learning Engineer at <a href="https://navya.tech/en/"> Navya</a> since October 2019. Before that I completed my master's degree in Informatics and Machine Learning. My research interests are in computer vision problems applied in autonomous driving. 
       </p>
 
       <br>
@@ -31,16 +25,74 @@ layout: default
         <h2>Table of Contents</h2>
         <div id="text-table-of-contents">
         <ul>
-        <li><a href="#orgd58b0f6">Publication</a></li>
-        <li><a href="#orgc54fd50">Research interests</a></li>
-        <li><a href="#orgbc2ddb7">Contact</a></li>
+        <li><a href="#posts">Posts</a></li>
+        <li><a href="#publication">Publication</a></li>
+        <li><a href="#research">Research interests</a></li>
+        <li><a href="#contact">Contact</a></li>
         </ul>
         </div>
         </div>
         
         <br>
         <div id="outline-container-orgd58b0f6" class="outline-2">
-        <h2 id="orgd58b0f6">Publication</h2>
+        <h2 id="posts">Posts</h2>
+        <div class="outline-text-2" id="text-orgd58b0f6">
+        <p>
+        {%- if site.posts.size > 0 -%}
+        <ul class="posts">
+          <li class="posts-labelgroup" id="posts-labelgroup">
+            <h2 id="posts-label">posts</h2>
+            {% if site.plainwhite.search %}
+            <div class="search-container">
+              <div class="search-section">
+                <i class="icon-search"></i>
+                <input type="text" name="search" id="searchbar" autocomplete="off" aria-label="search in posts">
+              </div>
+              <div class="search-results" id="search-results" data-placeholder="No Results" style="display: none;"></div>
+            </div>
+            {% endif %}
+          </li>
+
+          {%- for post in site.posts -%}
+            <li>
+              {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                <h3 class="post-title">{{ post.title | escape }}</h3>
+              </a>
+              <div class="post-meta">
+                <div class="post-date">
+                  <i class="icon-calendar"></i>
+                  {{ post.date | date: date_format }}
+                </div>
+                {%- if post.categories.size > 0-%}
+                <ul class="post-categories">
+                  {%- for tag in post.categories -%}
+                  <li>{{ tag }}</li>
+                  {%- endfor -%}
+                </ul>
+                {%- endif -%}
+              </div>
+              <div class="post">
+                {%- if site.show_excerpts -%}
+                  {{ post.excerpt }}
+                {%- endif -%}
+              </div>
+            </li>
+          {%- endfor -%}
+        </ul>
+
+        <!-- <p class="feed-subscribe"><svg class="svg-icon orange">
+          <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+        </svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p> -->
+        
+        {%- endif -%}
+        </p>
+        </div>
+        </div>
+
+        <br>
+        <div id="outline-container-orgd58b0f6" class="outline-2">
+        <h2 id="publication">Publication</h2>
         <div class="outline-text-2" id="text-orgd58b0f6">
         <p>
         Updating soon
@@ -50,7 +102,7 @@ layout: default
         
         <br>
         <div id="outline-container-orgc54fd50" class="outline-2">
-        <h2 id="orgc54fd50">Research interests</h2>
+        <h2 id="research">Research interests</h2>
         <div class="outline-text-2" id="text-orgc54fd50">
         <p>
            With three years of industry experience in autonomous driving perception problems. Interested in object detection, semantic segmentation, multi-object tracking, sensor fusion, simultaneous localization and mapping. Passionate about solving real world problems.
@@ -62,7 +114,7 @@ layout: default
         
         <br>
         <div id="outline-container-orgbc2ddb7" class="outline-2">
-        <h2 id="orgbc2ddb7">Contact</h2>
+        <h2 id="contact">Contact</h2>
             <tr>
               <td height="55" style="font-family:Helvetica, Arial, sans-serif; font-size:18px; font-style:bold;">
                 <strong>Hao Liu</strong>
@@ -72,69 +124,14 @@ layout: default
             </tr>
             <tr>
               <p><td height="35" style="font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#4d4d4e;">
-                7 Place de la Défense | Puteaux, Hauts-de-Seine, 92800, France
-              </td></p>
-            </tr>
-            <tr>
-              <p></p><td class="hover" height="25" style="font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#d0292d;">
-                <a href="mailto:john.smith@solodev.com" onMouseOver="this.style.color='#0096FF'" onMouseOut="this.style.color='#0096FF'" style="color:#0000FF; ">hao.liu@navya.tech</a>
+                7 Place de la Défense | Courbevoie, Hauts-de-Seine, 92400, France
               </td></p>
             </tr>
         </div>
       
   </div>
-  
+  {{ content }}
   </body>
 
  
 
-{{ content }}
-
-{%- if site.posts.size > 0 -%}
-  <ul class="posts">
-    <li class="posts-labelgroup" id="posts-labelgroup">
-      <h1 id="posts-label">posts</h1>
-      {% if site.plainwhite.search %}
-      <div class="search-container">
-        <div class="search-section">
-          <i class="icon-search"></i>
-          <input type="text" name="search" id="searchbar" autocomplete="off" aria-label="search in posts">
-        </div>
-        <div class="search-results" id="search-results" data-placeholder="No Results" style="display: none;"></div>
-      </div>
-      {% endif %}
-    </li>
-
-    {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          <h2 class="post-title">{{ post.title | escape }}</h2>
-        </a>
-        <div class="post-meta">
-          <div class="post-date">
-            <i class="icon-calendar"></i>
-            {{ post.date | date: date_format }}
-          </div>
-          {%- if post.categories.size > 0-%}
-          <ul class="post-categories">
-            {%- for tag in post.categories -%}
-            <li>{{ tag }}</li>
-            {%- endfor -%}
-          </ul>
-          {%- endif -%}
-        </div>
-        <div class="post">
-          {%- if site.show_excerpts -%}
-            {{ post.excerpt }}
-          {%- endif -%}
-        </div>
-      </li>
-    {%- endfor -%}
-  </ul>
-
-  <!-- <p class="feed-subscribe"><svg class="svg-icon orange">
-		<use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-	</svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p> -->
-  
-{%- endif -%}
