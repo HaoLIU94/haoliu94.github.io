@@ -11,7 +11,7 @@ show_excerpts: true
 
 plainwhite:
   name: Hao LIU - 劉豪
-  tagline: Machine learning engineer
+  tagline: Machine Learning Engineer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
@@ -25,11 +25,6 @@ plainwhite:
     - home
     - post
     - page
-  posts:
-    - title: js
-      url: "2019-03-23-welcome-to-jekyll.md"
-    - title: cv
-      url: "2019-03-23-welcome-to-jekyll.md"
   # generate social links in footer
   social_links:
     github:  HaoLIU94
