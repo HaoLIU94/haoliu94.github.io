@@ -18,9 +18,9 @@ plainwhite:
   dark_mode: true # set to true to add dark mode toggle
   portfolio_image: "assets/portfolio.png" # path the image to display
   html_lang: "en" # set the lang attribute of the <html> tag for the pages.
-  navigation:
-    - title: Résumé
-      url: #"/resume"
+  # navigation:
+  #   - title: Résumé
+  #     url: #"/resume"
   condensed_mobile:
     - home
     - post
