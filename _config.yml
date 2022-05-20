@@ -5,7 +5,7 @@ author: Hao Liu
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 
 # Build settings
-# remote_theme: samarsault/plainwhite-jekyll
+remote_theme: samarsault/plainwhite-jekyll
 
 show_excerpts: true
 
