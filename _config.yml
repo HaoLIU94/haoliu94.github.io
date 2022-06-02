@@ -13,7 +13,6 @@ plainwhite:
   name: Hao LIU - 劉豪
   tagline: Machine Learning Engineer
   date_format: "%b %-d, %Y"
-  sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
   dark_mode: true # set to true to add dark mode toggle
   portfolio_image: "assets/portfolio.png" # path the image to display
