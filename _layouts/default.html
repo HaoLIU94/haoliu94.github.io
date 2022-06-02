@@ -33,6 +33,19 @@
       {%- endif -%}
       </div>
       {% capture footer %}
+      
+      {%- if site.plainwhite.navigation -%}
+      <nav class="navigation about-footer {{condensed_class}}">
+        <ul>
+          {% for link in site.plainwhite.navigation %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {%- endif -%}
+
       {%- if site.plainwhite.social_links != '' -%}
       <ul class="social about-footer {{condensed_class}}">
         {%- if site.plainwhite.social_links.github -%}
@@ -78,17 +91,6 @@
         </a>
         {%- endif -%}
       </ul>
-      {%- endif -%}
-      {%- if site.plainwhite.navigation -%}
-      <nav class="navigation about-footer {{condensed_class}}">
-        <ul>
-          {% for link in site.plainwhite.navigation %}
-          <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
       {%- endif -%}
       <p class="about-footer {{condensed_class}}">&copy;
         {{ "now" | date: "%Y" }}</p>
