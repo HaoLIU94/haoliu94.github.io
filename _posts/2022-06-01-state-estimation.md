@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "State-Estimation"
-date:   2022-06-02 12:30:16 +0200
+date:   2022-06-01 12:30:16 +0200
 categories: Bayes-filter
 ---
 
